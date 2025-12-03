@@ -103,17 +103,16 @@ This document provides the complete data dictionary for the Mining Stock Managem
  Objective: Create and configure Oracle pluggable database.
 
 # 📋 STEP 1: Connect to Oracle as SYSDBA
-
 # 📊 STEP 2: Check Current Database Status
  <img width="1920" height="1080" alt="Screenshot (642)" src="https://github.com/user-attachments/assets/efb2843d-ca51-45f3-b700-96851df20457" />
 
 # 🏗️ STEP 3: Create Your Pluggable Database (PDB)
- And
- 🔓 STEP 4: Open Your New PDB
+# And
+# 🔓 STEP 4: Open Your New PDB
 <img width="1920" height="1080" alt="Screenshot (643)" src="https://github.com/user-attachments/assets/dd070ce9-1ca5-4d83-bd79-d7d072c28f06" />
 
 
-✅ STEP 5: Verify PDB Was Created
+# ✅ STEP 5: Verify PDB Was Created
 <img width="1920" height="1080" alt="Screenshot (643)" src="https://github.com/user-attachments/assets/0c7ac041-8777-4da3-9e4e-c6cda05b8211" />
 
 # 💾 STEP 6: Create Custom Tablespaces
