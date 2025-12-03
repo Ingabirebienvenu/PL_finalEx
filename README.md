@@ -71,7 +71,7 @@ ANALYTICS OPPORTUNITIES:
 
  2. BI Considerations:
 
- # Phase III Data Dictionary
+ # Data Dictionary
 
 This document provides the complete data dictionary for the Mining Stock Management System, including all tables, columns, data types, constraints, and purposes.
 
