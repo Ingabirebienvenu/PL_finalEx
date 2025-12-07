@@ -1,19 +1,44 @@
-# PL_finalEx
-# PL/SQL Oracle Database Capstone Project
-# Academic Year: 2025-2026 | Semester: 5
-# Lecturer: Eric Maniraguha | eric.maniraguha@auca.ac.rw
-# Institution: Adventist University of Central Africa (AUCA)
+# Phase I: Problem Statement & Presentation
+## Mining Resource Optimization & Stock Tracking System
 
+### 📋 Project Information
+- **Student:** Ingabire Bienvenu
+- **Student ID:** 26117
+- **Course:** Database Development with PL/SQL (INSY 8311)
+- **Institution:** Adventist University of Central Africa (AUCA)
+- **Lecturer:** Eric Maniraquha
+- **Semester:** I, Academic Year 2025-2026
+- **Deadline:** November 17, 2025
 
-# 📋Topic: Mining Resource Optimization & Stock Tracking System 
+### 🎯 Problem Statement
+Mining operations face significant challenges in managing critical resources like fuel, explosives, and spare parts. Manual tracking systems lead to:
+- **Production downtime** when essential materials run out
+- **Safety risks** from inadequate explosive management
+- **Increased operational costs** due to emergency procurement
+- **Lack of real-time visibility** into resource consumption
 
-# 📋Project Description 
+### 💡 Proposed Solution
+An **Oracle PL/SQL Database System** that:
+1. **Automatically monitors** stock levels in real-time
+2. **Triggers automatic reorders** when stock falls below threshold
+3. **Calculates optimal reorder quantities** based on historical usage
+4. **Predicts stock-out dates** for proactive planning
+5. **Provides comprehensive audit trails** for compliance
 
-📝Mining operations require continuous availability of essential resources such as fuel, explosives, 
-and spare parts. Any delay in restocking these resources can lead to serious production 
-downtime, safety risks, and increased operational costs. To address this, the Mining Resource 
-Optimization & Stock Tracking System is designed to automate the monitoring, analysis, and 
-replenishment of mining materials. 
+### 👥 Target Users
+1. **Mining Operations Managers** - Need real-time stock visibility
+2. **Procurement Officers** - Require automated reorder alerts
+3. **Safety Officers** - Monitor explosive materials usage
+4. **Finance Department** - Track resource costs and consumption
+5. **Executive Management** - Review high-level KPIs and trends
+
+### 📊 Business Intelligence Potential
+The system enables data-driven decisions through:
+- **Consumption pattern analysis** to optimize procurement
+- **Supplier performance tracking** to improve reliability
+- **Cost analysis** to reduce operational expenses
+- **Forecasting models** to prevent stock-outs
+- **Compliance reporting** for safety regulations
 
  # Phase II
  # Business process modeling - UML/BPMN diagram + 1-page explanation
@@ -122,17 +147,17 @@ This document provides the complete data dictionary for the Mining Stock Managem
 <img width="1920" height="1080" alt="Screenshot (645)" src="https://github.com/user-attachments/assets/1a5d302b-7994-4ebf-8387-28a7f33d0d25" />
 
 
-# 👤 STEP 10: Create Your Application User and 🔑 STEP 11: Grant Privileges
+# 👤 STEP 7: Create Your Application User and 🔑 STEP 11: Grant Privileges
 <img width="1920" height="1080" alt="Screenshot (646)" src="https://github.com/user-attachments/assets/163a8ebf-6be3-42f2-accf-13775b61465b" />
 
-# ✅ STEP 12: Verify User and Privileges
+# ✅ STEP 8: Verify User and Privileges
 1 Check User Details
 2 Check System Privileges
 3 Check Tablespace Quotas
 <img width="1920" height="1080" alt="Screenshot (647)" src="https://github.com/user-attachments/assets/299635ef-ce64-4206-8d13-d9c83bb7b371" />
 
 
-# 🔧 STEP 13: Configure Database Parameters
+# 🔧 STEP 9: Configure Database Parameters
 1 Check Memory Settings
 2 Check Archive Log Mode
 <img width="1920" height="1080" alt="Screenshot (648)" src="https://github.com/user-attachments/assets/235134e1-dedd-49e1-ac58-9ced4ce90bc8" />
