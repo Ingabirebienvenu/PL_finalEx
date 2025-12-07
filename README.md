@@ -7,8 +7,7 @@
 - **Course:** Database Development with PL/SQL (INSY 8311)
 - **Institution:** Adventist University of Central Africa (AUCA)
 - **Lecturer:** Eric Maniraquha
-- **Semester:** I, Academic Year 2025-2026
-- **Deadline:** November 17, 2025
+- **Semester:** V, Academic Year 2025-2026
 
 ### 🎯 Problem Statement
 Mining operations face significant challenges in managing critical resources like fuel, explosives, and spare parts. Manual tracking systems lead to:
