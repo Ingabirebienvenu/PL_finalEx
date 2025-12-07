@@ -1,0 +1,89 @@
+-- 1. SUPPLIERS Table
+CREATE TABLE suppliers (
+    supplier_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR2(50) NOT NULL,
+    contact VARCHAR2(50) NOT NULL,
+    email VARCHAR2(100),
+    phone VARCHAR2(20),
+    address VARCHAR2(200),
+    created_date DATE DEFAULT SYSDATE,
+    CONSTRAINT chk_supplier_contact CHECK (contact IS NOT NULL)
+) TABLESPACE mining_data;
+
+
+-- 2. RESOURCES Table
+CREATE TABLE resources (
+    res_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR2(50) NOT NULL,
+    stock_level NUMBER(10,2) DEFAULT 0,
+    threshold NUMBER(10,2) NOT NULL,
+    unit_of_measure VARCHAR2(20) DEFAULT 'Units',
+    category VARCHAR2(30) CHECK (category IN ('Fuel', 'Explosives', 'Spare Parts', 'Chemicals', 'Lubricants')),
+    supplier_id NUMBER,
+    unit_price NUMBER(10,2),
+    last_updated DATE DEFAULT SYSDATE,
+    CONSTRAINT fk_resources_supplier FOREIGN KEY (supplier_id) 
+        REFERENCES suppliers(supplier_id) ON DELETE SET NULL,
+    CONSTRAINT chk_stock_nonnegative CHECK (stock_level >= 0),
+    CONSTRAINT chk_threshold_positive CHECK (threshold > 0)
+) TABLESPACE mining_data;
+
+
+-- 3. USAGE_LOG Table
+CREATE TABLE usage_log (
+    log_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    res_id NUMBER NOT NULL,
+    date_used DATE DEFAULT SYSDATE NOT NULL,
+    quantity_used NUMBER(10,2) NOT NULL,
+    department VARCHAR2(50),
+    operator_id VARCHAR2(20),
+    equipment_used VARCHAR2(100),
+    notes VARCHAR2(200),
+    CONSTRAINT fk_usage_resource FOREIGN KEY (res_id) 
+        REFERENCES resources(res_id) ON DELETE CASCADE,
+    CONSTRAINT chk_quantity_positive CHECK (quantity_used > 0)
+) TABLESPACE mining_data;
+
+
+
+-- 4. REORDERS Table (Note: Fixed typo from "Recorders")
+CREATE TABLE reorders (
+    order_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    res_id NUMBER NOT NULL,
+    order_date DATE DEFAULT SYSDATE NOT NULL,
+    quantity NUMBER(10,2) NOT NULL,
+    status VARCHAR2(20) DEFAULT 'Pending' 
+        CHECK (status IN ('Pending', 'Approved', 'Ordered', 'Delivered', 'Cancelled')),
+    expected_delivery DATE,
+    actual_delivery DATE,
+    approved_by VARCHAR2(50),
+    approval_date DATE,
+    CONSTRAINT fk_reorders_resource FOREIGN KEY (res_id) 
+        REFERENCES resources(res_id) ON DELETE CASCADE,
+    CONSTRAINT chk_reorder_quantity CHECK (quantity > 0),
+    CONSTRAINT chk_delivery_dates CHECK (actual_delivery IS NULL OR actual_delivery >= order_date)
+) TABLESPACE mining_data;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
